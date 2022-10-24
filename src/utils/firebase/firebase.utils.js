@@ -50,7 +50,8 @@ export const db = getFirestore();
 
 export const addCollectionAndDocuments = async (
   collectionKey,
-  objectsToAdd
+  objectsToAdd,
+  field
 ) => {
   const collectionRef = collection(db, collectionKey);
   const batch = writeBatch(db);
@@ -70,7 +71,10 @@ export const getCategoriesAndDocuments = async () => {
 
   return querySnapshot.docs.map((doc) => doc.data());
 };
-export const createUserDocumentFromAuth = async (userAuth, additionalData) => {
+export const createUserDocumentFromAuth = async (
+  userAuth,
+  additionalData = {}
+) => {
   if (!userAuth) return;
   const userDocRef = doc(db, 'users', userAuth.uid);
 
