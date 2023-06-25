@@ -1,4 +1,5 @@
-import styled from 'styled-components';
+import styled from "styled-components";
+import { devices } from "../constants/screens";
 
 export const BackgroundImage = styled.div`
   width: 100%;
@@ -36,7 +37,7 @@ export const Body = styled.div`
   }
 `;
 export const DirectoryItemContainer = styled.div`
-  min-width: 30%;
+  min-width: 100%;
   height: 240px;
   flex: 1 1 auto;
   display: flex;
@@ -45,7 +46,12 @@ export const DirectoryItemContainer = styled.div`
   border: 1px solid black;
   margin: 0 7.5px 15px;
   overflow: hidden;
-
+  @media only screen and ${devices.sm} {
+    min-width: 46%;
+  }
+  @media only screen and ${devices.lg} {
+    min-width: 30%;
+  }
   &:hover {
     cursor: pointer;
 

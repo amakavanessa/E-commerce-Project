@@ -3,12 +3,11 @@ import FooterImage from "../../assets/footer-image.avif";
 import { devices } from "../constants/screens";
 
 export const FooterContainer = styled.footer`
-    height: 480px;
+    height: 400px;
     position:relative;
     background-image: url(${FooterImage});
     background-position: center 35%;
     background-size: cover;
-
     background-repeat: no repeat;
     font-family: "Montserrat", sans-serif ;
     font-weight:100;
@@ -36,8 +35,9 @@ export const FooterContainer = styled.footer`
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
-        padding: 5px;
-        @media only screen and ${devices.lg} {
+        padding: 2px;
+        text-align:center;
+        @media only screen and ${devices.sm} {
             grid-template-columns: repeat(3, 1fr);
             gap: 1.5rem;
             padding: 30px;
@@ -55,6 +55,7 @@ export const FooterContainer = styled.footer`
       font-size: 1.4rem;
       margin-top: 1.8rem;
       align-items: center;
+      justify-content: center;
         a{
             color:white !important;
         }
