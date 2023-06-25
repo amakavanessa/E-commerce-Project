@@ -5,7 +5,7 @@ import Footer from "../../components/footer/footer.component";
 const Home = () => {
   return (
     <div>
-      <Categories />;
+      <Categories />
       <Footer />
       <Outlet />
     </div>
