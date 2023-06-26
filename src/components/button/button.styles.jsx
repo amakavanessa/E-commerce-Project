@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-
+import styled from "styled-components";
+import { devices } from "../constants/screens";
 export const BaseButton = styled.button`
   min-width: 165px;
   width: auto;
@@ -7,17 +7,19 @@ export const BaseButton = styled.button`
   letter-spacing: 0.5px;
   line-height: 50px;
   padding: 0 35px 0 35px;
-  font-size: 15px;
+  font-size: 12px;
   background-color: black;
   color: white;
   text-transform: uppercase;
-  font-family: 'Open Sans Condensed';
+  font-family: "Open Sans Condensed";
   font-weight: bolder;
   border: none;
   cursor: pointer;
   display: flex;
   justify-content: center;
-
+  @media only screen and ${devices.sm} {
+    font-size: 15px;
+  }
   &:hover {
     background-color: white;
     color: black;
@@ -39,7 +41,6 @@ export const InvertedButton = styled(BaseButton)`
   background-color: white;
   color: black;
   border: 1px solid black;
-
   &:hover {
     background-color: black;
     color: white;

@@ -1,12 +1,13 @@
-import { useState, useEffect, Fragment } from 'react';
-import { useSelector } from 'react-redux';
-import { useParams } from 'react-router-dom';
+import { useState, useEffect, Fragment } from "react";
+import { useSelector } from "react-redux";
+import { useParams } from "react-router-dom";
 
-import ProductCard from '../../components/product-card/product-card.component';
+import ProductCard from "../../components/product-card/product-card.component";
 
-import { selectCategoriesMap } from '../../store/categories/category.selector';
+import { selectCategoriesMap } from "../../store/categories/category.selector";
 
-import { CategoryContainer, CategoryTitle } from './category.styles';
+import { CategoryTitle } from "./category.styles";
+import { Preview } from "../../components/category-preview/category-preview.style";
 
 const Category = () => {
   const { category } = useParams();
@@ -21,12 +22,12 @@ const Category = () => {
   return (
     <Fragment>
       <CategoryTitle>{category.toUpperCase()}</CategoryTitle>
-      <CategoryContainer>
+      <Preview>
         {products &&
           products.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
-      </CategoryContainer>
+      </Preview>
     </Fragment>
   );
 };

@@ -1,13 +1,16 @@
-import styled from 'styled-components';
+import styled from "styled-components";
+import { devices } from "../constants/screens";
 
 export const ProductCardContainer = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  height: 350px;
+  height: 200px;
   align-items: center;
   position: relative;
-
+  @media only screen and ${devices.sm} {
+    height: 350px;
+  }
   img {
     width: 100%;
     height: 95%;
@@ -19,8 +22,11 @@ export const ProductCardContainer = styled.div`
     width: 80%;
     opacity: 0.7;
     position: absolute;
-    top: 255px;
+    top: 120px;
     display: none;
+    @media only screen and ${devices.sm} {
+      top: 255px;
+    }
   }
 
   &:hover {
@@ -35,11 +41,15 @@ export const ProductCardContainer = styled.div`
   }
 `;
 export const Footer = styled.div`
-  width: 100%;
-  height: 5%;
+  width: 90%;
+  // height: 5%;
+  // margin-bottom: 3rem;
   display: flex;
   justify-content: space-between;
-  font-size: 18px;
+  font-size: 14px;
+  @media only screen and ${devices.sm} {
+    font-size: 18px;
+  }
 `;
 
 export const Name = styled.span`

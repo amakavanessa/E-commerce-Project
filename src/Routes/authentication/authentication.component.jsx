@@ -1,6 +1,7 @@
-import SignUpForm from '../../components/sign-up-form/sign-up-form.component';
-import SignInForm from '../../components/sign-in-form/sign-in-form.component';
-import { AuthenticationContainer } from './authentication.styles';
+import SignUpForm from "../../components/sign-up-form/sign-up-form.component";
+import SignInForm from "../../components/sign-in-form/sign-in-form.component";
+import { AuthenticationContainer } from "./authentication.styles";
+
 const Authentication = () => {
   // useEffect(() => {
   //   (async () => {
@@ -16,14 +17,16 @@ const Authentication = () => {
   //   const userDocRef = await createUserDocumentFromAuth(user);
   // };
   return (
-    <AuthenticationContainer>
-      {/*<button onClick={logGoogleUser}> Sign in with Google Popup </button>*/}
-      <SignInForm />
-      <SignUpForm />
-      {/*incase of signIn with redirect<button onClick={signInWithGoogleRedirect}>
+    <div>
+      <AuthenticationContainer>
+        {/*<button onClick={logGoogleUser}> Sign in with Google Popup </button>*/}
+        <SignInForm />
+        <SignUpForm />
+        {/*incase of signIn with redirect<button onClick={signInWithGoogleRedirect}>
         Sign in with Google Redirect
       </button>*/}
-    </AuthenticationContainer>
+      </AuthenticationContainer>
+    </div>
   );
 };
 
