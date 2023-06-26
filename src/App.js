@@ -30,7 +30,7 @@ const App = () => {
     return unsubscribe;
   }, [dispatch]);
   return (
-    <>
+    <div className="root">
       <Routes>
         <Route path="/" element={<Navigation />}>
           <Route index element={<Home />} />
@@ -40,7 +40,7 @@ const App = () => {
         </Route>
       </Routes>
       <Footer />
-    </>
+    </div>
   );
 };
 

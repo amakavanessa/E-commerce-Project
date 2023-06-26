@@ -3,15 +3,13 @@ import FooterImage from "../../assets/footer-image.avif";
 import { devices } from "../constants/screens";
 
 export const FooterContainer = styled.footer`
-    height: 400px;
-    position:relative;
+    height: 50vh;
     background-image: url(${FooterImage});
     background-position: center 35%;
     background-size: cover;
     background-repeat: no repeat;
     font-family: "Montserrat", sans-serif ;
     font-weight:100;
-
     .imagebg{
         background-color: rgba(0,0,0,0.5);   
         height: 100%;
@@ -61,13 +59,13 @@ export const FooterContainer = styled.footer`
         }
     }
    
-   .footer__close {
-    border-top: 1.5px solid #fff;
-    height: 5rem;
-    position: absolute;
-    bottom: 0;
-    left: 5%;
-    width: 90%;
-    }
+  //  .footer__close {
+  //   border-top: 1.5px solid #fff;
+  //   height: 0rem;
+  //   position: absolute;
+  //   bottom: 0;
+  //   left: 5%;
+  //   width: 90%;
+  //   }
   .
 `;
