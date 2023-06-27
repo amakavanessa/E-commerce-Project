@@ -1,17 +1,17 @@
-import { useState } from 'react';
+import { useState } from "react";
 import {
   createAuthUserWithEmailAndPassword,
   createUserDocumentFromAuth,
-} from '../../utils/firebase/firebase.utils';
-import FormInput from '../form-input/form-input.component';
-import Button from '../button/button.component';
-import { SignUpContainer } from './sign-up-form.styles.jsx';
+} from "../../utils/firebase/firebase.utils";
+import FormInput from "../form-input/form-input.component";
+import Button from "../button/button.component";
+import { SignUpContainer } from "./sign-up-form.styles.jsx";
 
 const defaultFormFields = {
-  displayName: '',
-  email: '',
-  password: '',
-  confirmPassword: '',
+  displayName: "",
+  email: "",
+  password: "",
+  confirmPassword: "",
 };
 
 const SignUpForm = () => {
@@ -27,7 +27,7 @@ const SignUpForm = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     if (password !== confirmPassword) {
-      alert('passwords do not match');
+      alert("passwords do not match");
       return;
     }
     try {
@@ -48,7 +48,7 @@ const SignUpForm = () => {
   };
   return (
     <SignUpContainer>
-      <h2>Don't have an account</h2>
+      <h2>Don't have an account ?</h2>
       <span>Sign up with your email and password</span>
       <form onSubmit={handleSubmit}>
         <FormInput

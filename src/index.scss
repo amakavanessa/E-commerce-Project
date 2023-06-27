@@ -20,4 +20,9 @@ code {
 a {
   text-decoration: none;
   color: black;
+  transition: all 400ms ease;
+  cursor: pointer;
+  &:hover {
+    font-size: 120%;
+  }
 }

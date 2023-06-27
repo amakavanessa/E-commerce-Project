@@ -1,15 +1,15 @@
-import { useState } from 'react';
+import { useState } from "react";
 import {
   signInWithGooglePopup,
   signInAuthUserWithEmailAndPassword,
-} from '../../utils/firebase/firebase.utils';
+} from "../../utils/firebase/firebase.utils";
 
-import FormInput from '../form-input/form-input.component';
-import Button, { BUTTON_TYPE_CLASSES } from '../button/button.component';
-import { SignUpContainer, ButtonsContainer } from './sign-in-form.styles';
+import FormInput from "../form-input/form-input.component";
+import Button, { BUTTON_TYPE_CLASSES } from "../button/button.component";
+import { SignUpContainer, ButtonsContainer } from "./sign-in-form.styles";
 const defaultFormFields = {
-  email: '',
-  password: '',
+  email: "",
+  password: "",
 };
 
 const SignInForm = () => {
@@ -31,11 +31,11 @@ const SignInForm = () => {
       resetFormFields();
     } catch (error) {
       switch (error.code) {
-        case 'auth/wrong-password':
-          alert('incorrect password for email');
+        case "auth/wrong-password":
+          alert("incorrect password for email");
           break;
-        case 'auth/user-not-found':
-          alert('no user associated with this email');
+        case "auth/user-not-found":
+          alert("no user associated with this email");
           break;
         default:
           console.log(error);
@@ -48,7 +48,7 @@ const SignInForm = () => {
   };
   return (
     <SignUpContainer>
-      <h2>Already have an account</h2>
+      <h2>Already have an account ?</h2>
       <span>Sign in with your email and password</span>
       <form onSubmit={handleSubmit}>
         <FormInput

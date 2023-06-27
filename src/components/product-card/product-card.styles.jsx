@@ -11,6 +11,9 @@ export const ProductCardContainer = styled.div`
   @media only screen and ${devices.sm} {
     height: 350px;
   }
+  @media only screen and ${devices.xxs} {
+    height: 120px;
+  }
   img {
     width: 100%;
     height: 95%;
@@ -27,6 +30,9 @@ export const ProductCardContainer = styled.div`
     @media only screen and ${devices.sm} {
       top: 255px;
     }
+    @media only screen and ${devices.xxs} {
+      top: 60px;
+    }
   }
 
   &:hover {
@@ -42,8 +48,6 @@ export const ProductCardContainer = styled.div`
 `;
 export const Footer = styled.div`
   width: 90%;
-  // height: 5%;
-  // margin-bottom: 3rem;
   display: flex;
   justify-content: space-between;
   font-size: 14px;

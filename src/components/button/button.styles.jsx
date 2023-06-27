@@ -7,7 +7,7 @@ export const BaseButton = styled.button`
   letter-spacing: 0.5px;
   line-height: 50px;
   padding: 0 35px 0 35px;
-  font-size: 12px;
+  font-size: 10px;
   background-color: black;
   color: white;
   text-transform: uppercase;
@@ -19,6 +19,10 @@ export const BaseButton = styled.button`
   justify-content: center;
   @media only screen and ${devices.sm} {
     font-size: 15px;
+  }
+  @media only screen and ${devices.xxs} {
+    padding: 0 5px 0 5px;
+    min-width: 100px;
   }
   &:hover {
     background-color: white;

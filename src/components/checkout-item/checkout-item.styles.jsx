@@ -11,10 +11,12 @@ export const CheckoutItemContainer = styled.div`
   font-size: 0.8rem;
   @media only screen and ${devices.sm} {
     font-size: 20px;
+    padding: 0;
   }
   @media only screen and ${devices.xxs} {
     font-size: 10px;
     text-align: center;
+    min-height: 50px;
   }
 `;
 
@@ -24,8 +26,12 @@ export const ImageContainer = styled.div`
 `;
 
 export const Image = styled.img`
-  width: 50%;
+  width: 75%;
   height: 50%;
+  @media only screen and ${devices.xxs} {
+    width: 50%;
+    height: 50%;
+  }
 `;
 export const Name = styled.span`
   width: 23%;

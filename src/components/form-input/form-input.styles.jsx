@@ -1,7 +1,7 @@
-import styled, { css } from 'styled-components';
-
-const subColor = 'grey';
-const mainColor = 'black';
+import styled, { css } from "styled-components";
+import { devices } from "../constants/screens";
+const subColor = "grey";
+const mainColor = "black";
 //the below is a mixin
 const shrinkLabelStyles = css`
   top: -14px;
@@ -45,8 +45,10 @@ export const Input = styled.input`
 export const Group = styled.div`
   position: relative;
   margin: 45px 0;
-
-  input[type='password'] {
+  @media only screen and ${devices.xxs} {
+    margin: 0.5rem auto;
+  }
+  input[type="password"] {
     letter-spacing: 0.3em;
   }
 `;
