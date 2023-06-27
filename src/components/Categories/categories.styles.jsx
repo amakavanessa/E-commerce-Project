@@ -8,6 +8,7 @@ export const CategoriesContainer = styled.div`
   padding: 1.5rem;
   @media only screen and ${devices.sm} {
     padding: 1.5rem 3rem;
+    margin: 6rem 0;
   }
   @media only screen and ${devices.xxs} {
     padding: 1.5rem 1rem;
