@@ -1,10 +1,9 @@
 import React from "react";
 
-import hats from "../../assets/hats.jpg";
 import mens from "../../assets/men.jpg";
 import womens from "../../assets/womens.avif";
 import jackets from "../../assets/jacket.jpg";
-import sneakers from "../../assets/sneakers.jpg";
+
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -34,11 +33,11 @@ const Hero = () => {
       >
         <SwiperSlide style={{ background: "#696d5f" }}>
           <img src={womens} alt="womens" />
-          <div className="text">For Women</div>
+          <div className="text">Women's Collection</div>
         </SwiperSlide>
         <SwiperSlide style={{ background: "#af8d6a" }}>
           <img src={mens} alt="for men" />
-          <div className="text">For Men</div>
+          <div className="text">Men's Collection</div>
         </SwiperSlide>
         <SwiperSlide style={{ background: "#64626a" }}>
           <img src={jackets} alt="jacket" />
