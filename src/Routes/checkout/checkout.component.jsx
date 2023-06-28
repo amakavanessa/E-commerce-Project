@@ -15,8 +15,9 @@ import {
   BlankUser,
 } from "./checkout.styles.jsx";
 import { clearCart } from "../../store/cart/cart.action";
+import { variable } from "../var";
 
-const publicKey = "";
+const publicKey = variable.publicKey;
 
 const Checkout = () => {
   const [isCartCleared, setIsCartCleared] = useState(false);
