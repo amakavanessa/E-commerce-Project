@@ -1,6 +1,6 @@
-import { createContext, useState, useReducer } from 'react';
+import { createContext, useState, useReducer } from "react";
 
-import { createAction } from '../utils/reducer/reducer.utils';
+import { createAction } from "../utils/reducer/reducer.utils";
 
 const addCartItem = (cartItems, productToAdd) => {
   const existingCartItem = cartItems.find(
@@ -38,10 +38,11 @@ const removeCartItem = (cartItems, cartItemToRemove) => {
 };
 
 const CART_ACTION_TYPES = {
-  SET_IS_CART_OPEN: 'SET_IS_CART_OPEN',
-  SET_CART_ITEMS: 'SET_CART_ITEMS',
-  SET_CART_COUNT: 'SET_CART_COUNT',
-  SET_CART_TOTAL: 'SET_CART_TOTAL',
+  SET_IS_CART_OPEN: "SET_IS_CART_OPEN",
+  SET_CART_ITEMS: "SET_CART_ITEMS",
+  SET_CART_COUNT: "SET_CART_COUNT",
+  SET_CART_TOTAL: "SET_CART_TOTAL",
+  SET_CLEAR_CART: "SET_CLEAR_CART",
 };
 
 const INITIAL_STATE = {
@@ -121,13 +122,16 @@ export const CartProvider = ({ children }) => {
     const newCartItems = clearCartItem(cartItems, cartItemToClear);
     updateCartItemsReducer(newCartItems);
   };
-
+  const clearCart = () => {
+    return [];
+  };
   const value = {
     isCartOpen,
     setIsCartOpen,
     addItemToCart,
     removeItemToCart,
     clearItemFromCart,
+    clearCart,
     cartItems,
     cartCount,
     cartTotal,

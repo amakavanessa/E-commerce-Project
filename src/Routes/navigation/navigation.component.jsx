@@ -21,6 +21,7 @@ import {
 
 const NavBar = () => {
   const currentUser = useSelector(selectCurrentUser);
+
   const isCartOpen = useSelector(selectIsCartOpen);
 
   return (

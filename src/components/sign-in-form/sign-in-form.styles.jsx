@@ -30,7 +30,7 @@ export const ButtonsContainer = styled.div`
     margin: 0 0.3rem;
 
     @media only screen and ${devices.lg} {
-      margin: 0;
+      justify-content: space-around;
     }
 
     @media only screen and ${devices.xxs} {
