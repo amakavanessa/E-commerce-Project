@@ -24,7 +24,7 @@ const DirectoryItem = ({ category }) => {
       },
       { rootMargin: "-20px" }
     );
-    console.log(isIntersecting);
+
     observer.observe(animateRef.current);
 
     return () => observer.disconnect();
