@@ -30,20 +30,8 @@ const DirectoryItem = ({ category }) => {
     return () => observer.disconnect();
   }, [isIntersecting]);
 
-  // useEffect(() => {
-  //   if (isIntersecting) {
-  //     animateRef.current.classList.add("slide-in");
-  //   } else {
-  //     animateRef.current.classList.remove("slide-in");
-  //   }
-  // }, [isIntersecting]);
-
   return (
-    <DirectoryItemContainer
-      onClick={onNavigateHandler}
-      ref={animateRef}
-      className={isIntersecting ? "animate" : ""}
-    >
+    <DirectoryItemContainer onClick={onNavigateHandler} ref={animateRef}>
       <BackgroundImage
         imageUrl={imageUrl}
         className={isIntersecting ? "slide-in" : ""}
