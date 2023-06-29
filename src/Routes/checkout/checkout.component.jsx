@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { PaystackButton } from "react-paystack";
+
 import {
   selectCartItems,
   selectCartTotal,
@@ -15,9 +16,8 @@ import {
   BlankUser,
 } from "./checkout.styles.jsx";
 import { clearCart } from "../../store/cart/cart.action";
-import { variable } from "../var";
 
-const publicKey = variable.publicKey;
+const publicKey = process.env.REACT_APP_PUBLIC_KEY;
 
 const Checkout = () => {
   const [isCartCleared, setIsCartCleared] = useState(false);
@@ -27,7 +27,7 @@ const Checkout = () => {
   const cartTotal = useSelector(selectCartTotal);
   const currentUser = useSelector(selectCurrentUser);
   const email = currentUser?.email;
-  const amount = cartTotal * 754.45 * 100;
+  const amount = cartTotal * 754 * 100;
   const componentProps = {
     email,
     amount,
