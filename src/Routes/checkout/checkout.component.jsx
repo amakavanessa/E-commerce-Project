@@ -35,7 +35,6 @@ const Checkout = () => {
     text: "Pay Now",
     onSuccess: () => {
       dispatch(clearCart());
-      console.log(cartItems);
     },
     // onClose: () => alert("Wait! You need this oil, don't go!!!!"),
   };
