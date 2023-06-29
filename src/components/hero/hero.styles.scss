@@ -1,7 +1,15 @@
 .swiper-slide {
   position: relative;
-  height: calc(100vh - 100px);
-
+  height: 60vh;
+  @media only screen and (min-width: 640px) {
+    height: 70vh;
+  }
+  @media only screen and (min-width: 1024px) {
+    height: calc(100vh - 100px);
+  }
+  @media only screen and (max-width: 369px) {
+    height: 50vh;
+  }
   @keyframes Scale {
     0% {
       width: 50%;
@@ -20,6 +28,8 @@
   img {
     display: block;
     margin: 0;
+    height: auto;
+    width: 50%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -70,12 +80,9 @@
 .swiper-pagination-bullet {
   display: none;
 }
-.swiper-button-next {
-  color: #fefbfe;
-}
-
+.swiper-button-next,
 .swiper-button-prev {
-  color: #fefbfe;
+  display: none;
 }
 
 // .swiper-button-prev::after {

@@ -1,0 +1,23 @@
+// .slide-in {
+//   transform: scale(2);
+// }
+//     transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+@keyframes Scaler {
+  0% {
+    transform: scale(1);
+    transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+  }
+  50% {
+    transform: scale(1.1);
+    transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+  }
+  100% {
+    transform: scale(1);
+    transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+  }
+}
+.slide-in {
+  transition: transform 3s ease-in-out;
+  animation-name: Scaler;
+  animation-duration: 3s;
+}
