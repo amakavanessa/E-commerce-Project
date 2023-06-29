@@ -8,7 +8,7 @@ const Footer = () => {
     <FooterContainer>
       <div className="imagebg">
         <div className="footer__sections">
-          <div className="footer__section">
+          <div>
             <h2>SUPPORT </h2>
             <h4> Contact Us </h4>
             <h4>Shipping</h4>
@@ -16,7 +16,7 @@ const Footer = () => {
             <h4>Accessibility</h4>
           </div>
 
-          <div className="footer__section">
+          <div>
             <h2> Our Company </h2>
             <h4>Gift Cards</h4>
             <h4>Services</h4>
@@ -37,9 +37,11 @@ const Footer = () => {
                 <IoLogoTwitter />
               </a>
             </div>
+            <div className="footer__close">
+              Designed and developed by Precious C Nnam
+            </div>
           </div>
         </div>
-        <div className="footer__close"></div>
       </div>
     </FooterContainer>
   );

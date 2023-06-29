@@ -27,7 +27,7 @@ const Checkout = () => {
   const cartTotal = useSelector(selectCartTotal);
   const currentUser = useSelector(selectCurrentUser);
   const email = currentUser?.email;
-  const amount = cartTotal * 100;
+  const amount = cartTotal * 754.45 * 100;
   const componentProps = {
     email,
     amount,

@@ -35,22 +35,14 @@ const Hero = () => {
           <img src={womens} alt="womens" />
           <div className="text">Women's Collection</div>
         </SwiperSlide>
-        <SwiperSlide style={{ background: "#af8d6a" }}>
+        <SwiperSlide style={{ background: "#46516d" }}>
           <img src={mens} alt="for men" />
           <div className="text">Men's Collection</div>
         </SwiperSlide>
-        <SwiperSlide style={{ background: "#64626a" }}>
+        <SwiperSlide style={{ background: "#c69b86" }}>
           <img src={jackets} alt="jacket" />
           <div className="text">Jackets</div>
         </SwiperSlide>
-        {/* <SwiperSlide style={{ background: "#856047" }}>
-          <img src={sneakers} alt="sneakers" />
-          <div className="text">Sneakers</div>
-        </SwiperSlide>
-        <SwiperSlide style={{ background: " #384d61" }}>
-          <img src={hats} alt="hats" />
-          <div className="text">Hats</div>
-        </SwiperSlide> */}
       </Swiper>
     </>
   );

@@ -44,6 +44,11 @@ export const FooterContainer = styled.footer`
             color: #fff;
             font-size:1rem
         }
+        .footer__section{
+          display:flex;
+          flex-direction:column;
+          
+        }
     }
   
 
@@ -59,13 +64,19 @@ export const FooterContainer = styled.footer`
         }
     }
    
-  //  .footer__close {
-  //   border-top: 1.5px solid #fff;
-  //   height: 0rem;
-  //   position: absolute;
-  //   bottom: 0;
-  //   left: 5%;
-  //   width: 90%;
-  //   }
+   .footer__close {
+      color:white;
+      margin:1rem 6px;
+      font-size:0.4rem!important;
+
+      @media only screen and ${devices.sm} {
+        margin:2rem auto;
+        font-size:0.8rem!important;
+    }
+    @media only screen and ${devices.xxs} {
+      margin:.3rem 6px;
+      font-size:5px!important;
+  }
+    }
   .
 `;
