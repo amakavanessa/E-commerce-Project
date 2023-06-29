@@ -22,12 +22,12 @@ import {
 } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: process.env.REACT_APP_API_KEY,
-  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
-  projectId: process.env.REACT_APP_PROJECT_ID,
-  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
-  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
-  appId: process.env.REACT_APP_APP_ID,
+  apiKey: "AIzaSyAF8I45lWIsiNnkttTSXtH1ndtDjNuMZx0",
+  authDomain: "royal-apparel-db.firebaseapp.com",
+  projectId: "royal-apparel-db",
+  storageBucket: "royal-apparel-db.appspot.com",
+  messagingSenderId: "418479323080",
+  appId: "1:418479323080:web:41a6ad2a362a27f7cf32fd",
 };
 
 // Initialize Firebase
